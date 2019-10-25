@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index page</title>
+</head>
+<body>
+    <h1>ALL MOVIES</h1>
+    <% for(var i = 0; i<movies.length;i++){ %>
+        <h4> <%= movies[i].title %> </h4>
+        <p><%= movies[i].desc %></p>
+        <div><%= movies[i].length %></div>
+        <a href="/movies/<%= movies[i]._id %>">SHOW MORE</a>
+    <% } %>
+
+    <a href="/movies/new">NEW POST</a>
+</body>
+</html>
